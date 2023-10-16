@@ -9,6 +9,7 @@ import { FullScreenPageComponent } from './pages/full-screen-page/full-screen-pa
 import { MarkersPageComponent } from './pages/markers-page/markers-page.component';
 import { PropertiesPageComponent } from './pages/properties-page/properties-page.component';
 import { ZoomRangeComponent } from './pages/zoom-range/zoom-range.component';
+import { SideNavComponent } from './components/side-nav/side-nav.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ZoomRangeComponent } from './pages/zoom-range/zoom-range.component';
     FullScreenPageComponent,
     MarkersPageComponent,
     PropertiesPageComponent,
-    ZoomRangeComponent
+    ZoomRangeComponent,
+    SideNavComponent
   ],
   imports: [
     CommonModule,
