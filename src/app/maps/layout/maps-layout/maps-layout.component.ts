@@ -1,4 +1,11 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+
+interface SideItems {
+  name: string;
+  route: string;
+  icon: string;
+}
 
 @Component({
   selector: 'app-maps-layout', 
@@ -6,5 +13,28 @@ import { Component } from '@angular/core';
   styleUrls: ['./maps-layout.component.css']
 })
 export class MapsLayoutComponent {
+
+
+
+  public sidebarItems: SideItems[] = [{
+    name: 'FullScreen', icon: 'label', route: '/maps/fullscreen'
+  },
+  {
+    name: 'ZoomRange', icon: 'label', route: '/maps/zoom-range'
+  },
+  {
+    name: 'Markers', icon: 'label', route: '/maps/markers'
+  },
+  {
+    name: 'Houses', icon: 'label', route: '/maps/properties'
+  }
+  ]
+
+  constructor(
+    private router: Router,
+  
+  ){
+
+  }
 
 }
