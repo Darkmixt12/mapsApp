@@ -17,10 +17,10 @@ import { MaterialModule } from '../material/material/material.module';
     MiniMapComponent,
     SideMenuComponent,
     MapsLayoutComponent,
-    FullScreenPageComponent,
     MarkersPageComponent,
     PropertiesPageComponent,
     ZoomRangeComponent,
+    FullScreenPageComponent
     
 
     
