@@ -9,7 +9,7 @@ import { FullScreenPageComponent } from './pages/full-screen-page/full-screen-pa
 import { MarkersPageComponent } from './pages/markers-page/markers-page.component';
 import { PropertiesPageComponent } from './pages/properties-page/properties-page.component';
 import { ZoomRangeComponent } from './pages/zoom-range/zoom-range.component';
-import { SideNavComponent } from './components/side-nav/side-nav.component';
+import { MaterialModule } from '../material/material/material.module';
 
 
 @NgModule({
@@ -21,11 +21,14 @@ import { SideNavComponent } from './components/side-nav/side-nav.component';
     MarkersPageComponent,
     PropertiesPageComponent,
     ZoomRangeComponent,
-    SideNavComponent
+    
+
+    
   ],
   imports: [
     CommonModule,
-    MapsRoutingModule
+    MapsRoutingModule,
+    MaterialModule
   ]
 })
 export class MapsModule { }
