@@ -1,8 +1,6 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import * as mapboxgl from 'mapbox-gl';
 
-(mapboxgl as any).accessToken = 'pk.eyJ1IjoidmljaW91c2xpZXMiLCJhIjoiY2xudGNwbnozMDI3MjJzbnhmMXphMzNoYyJ9.SWblGwAuYVwjF58YD0ARSA';
-
 @Component({
   selector: 'app-full-screen-page',
   templateUrl: './full-screen-page.component.html',
