@@ -1,0 +1,28 @@
+#map	{
+	width: 99VW;
+	height: 94.3%;
+}
+
+button {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+
+}
+
+
+.list-group{
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    cursor: pointer;
+
+}
+
+.delete{
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    cursor: pointer;
+
+}
