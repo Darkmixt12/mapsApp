@@ -1,20 +1,22 @@
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnDestroy, ViewChild } from '@angular/core';
 
-import { Map } from 'mapbox-gl';
+import { LngLat, Map } from 'mapbox-gl';
 
 @Component({
   selector: 'app-zoom-range',
   templateUrl: './zoom-range.component.html',
   styleUrls: ['./zoom-range.component.css']
 })
-export class ZoomRangeComponent implements AfterViewInit {
+export class ZoomRangeComponent implements AfterViewInit, OnDestroy {
+
 
 
   
   @ViewChild('map') divMap?: ElementRef;
 
-  public zoom: number = 10;
+  public zoom: number = 6;
   public map?: Map;
+  public currentLngLat : LngLat = new LngLat(-83.753428, 9.748917)
 
 
   ngAfterViewInit(): void {
@@ -24,12 +26,18 @@ export class ZoomRangeComponent implements AfterViewInit {
     this.map = new Map({
       container: this.divMap?.nativeElement, // container ID
       style: 'mapbox://styles/mapbox/outdoors-v12', // style URL
-      center: [-83.753428, 9.748917], // starting position [lng, lat]
+      center: this.currentLngLat, // starting position [lng, lat]
       zoom: this.zoom, // starting zoom
       });
 
       this.mapListeners()
   } 
+
+  ngOnDestroy(): void {
+    this.map?.remove();
+  }
+
+
 
   mapListeners() {
     if (!this.map) throw "Mapa no Inicializado"
@@ -38,11 +46,18 @@ export class ZoomRangeComponent implements AfterViewInit {
       this.zoom = this.map!.getZoom();
     });
 
-    this.map.on('zoomed', (ev)=> {
+    this.map.on('zoomend', (ev)=> {
       if (this.map!.getZoom() < 18 ) return;
-
-      this.zoom = this.map!.getZoom();
+      this.map!.zoomTo(18)
     })
+
+    this.map.on('move', () => {
+      this.currentLngLat = this.map!.getCenter();
+      console.log(this.currentLngLat)
+    })
+
+    
+
   }
 
   zoomIn(){
@@ -55,8 +70,9 @@ export class ZoomRangeComponent implements AfterViewInit {
 
   zoomChanged(value: string) {
     this.zoom =  Number(value);
-    this.map?.zoomTo(value)
+    this.map?.zoomTo(this.zoom)
   }
 
+  
 
 }
