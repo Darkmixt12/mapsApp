@@ -5,7 +5,7 @@ import * as mapboxgl from 'mapbox-gl';
 (mapboxgl as any).accessToken = 'pk.eyJ1IjoidmljaW91c2xpZXMiLCJhIjoiY2xudGNwbnozMDI3MjJzbnhmMXphMzNoYyJ9.SWblGwAuYVwjF58YD0ARSA';
 
 import { MapsRoutingModule } from './maps-routing.module';
-import { MiniMapComponent } from './components/mini-map/mini-map.component';
+import { MiniMapComponent } from './pages/mini-map/mini-map.component';
 import { SideMenuComponent } from './components/side-menu/side-menu.component';
 import { MapsLayoutComponent } from './layout/maps-layout/maps-layout.component';
 import { FullScreenPageComponent } from './pages/full-screen-page/full-screen-page.component';

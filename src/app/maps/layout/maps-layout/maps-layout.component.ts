@@ -26,7 +26,7 @@ export class MapsLayoutComponent {
     name: 'Markers', icon: 'label', route: '/maps/markers'
   },
   {
-    name: 'Houses', icon: 'label', route: '/maps/properties'
+    name: 'Puntos de Venta', icon: 'label', route: '/maps/properties'
   }
   ]
 
