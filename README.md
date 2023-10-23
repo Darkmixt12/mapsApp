@@ -5,7 +5,7 @@ No usar directamente en AngularCLI (a menos que esten creadas la variables de en
 
 1. Clonar el .env.template y renombrarlo a .env
 2. Llenar las variables de entorno acorde
-3. Crear angular envs (Opcional) investigar
+3. Crear angular envs (Opcional) investigado
 
 ```
 npm run envs
