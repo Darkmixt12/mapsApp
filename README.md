@@ -8,7 +8,7 @@ No usar directamente en AngularCLI (a menos que esten creadas la variables de en
 3. Crear angular envs (Opcional) investigado
 
 ```
-npm run envs!
+npm run envs!!!
 ```
 
 4. Para development ejecutar:
