@@ -11,7 +11,7 @@ No usar directamente en AngularCLI (a menos que esten creadas la variables de en
 npm run envs!!!
 ```
 
-4. Para development ejecutar:
+4. Para development ejecutar!:
 ```
 npm run start
 ```
