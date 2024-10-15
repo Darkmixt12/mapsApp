@@ -1,4 +1,4 @@
-# Maps App!
+# Maps App
 No usar directamente en AngularCLI (a menos que esten creadas la variables de entorno), ya que las variables de entorno se crean basados en el .env
 
 ## PASOS:
